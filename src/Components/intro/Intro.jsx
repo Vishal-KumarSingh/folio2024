@@ -31,7 +31,7 @@ const Intro = () => {
       {/* left name side */}
       <div className="i-left">
         <div className="i-name">
-          <span>Hy! I am</span>
+          <span>Hii! I am</span>
           <div className="flex  md:iiflex">
             <motion.span
               style={{ flexDirections: "row" }}
@@ -52,7 +52,7 @@ const Intro = () => {
             </motion.span>
           </div>
           <span>
-            A Professional &nbsp;
+            An Aspiring &nbsp;
             <Typewriter
               options={{
                 strings: [
@@ -98,42 +98,7 @@ const Intro = () => {
         />
       </div>
 
-      <div className="header-social">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="header-social-icon">
-                <ul>
-                  <li>
-                    <a
-                      title=""
-                      href=""
-                    >
-                      <RiFacebookFill />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      title=""
-                      href=""
-                    >
-                      <RiGithubFill />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      title=""
-                      href=""
-                    >
-                      <RiLinkedinFill />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     
     </div>
   );
 };

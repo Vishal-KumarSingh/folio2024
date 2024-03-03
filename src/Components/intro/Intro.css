@@ -292,12 +292,12 @@ a {
   font-size: 25px;
 }
 @media screen and (max-width: 480px) {
-  .header-social {
-    bottom: 10% !important;
+  /* .header-social {
+    margin-top: 30px !important;
   }
   .header-social .header-social-icon::before {
     width: 110% !important;
-  }
+  } */
 }
 @media screen and (min-height: 670px) {
   .header-social {
