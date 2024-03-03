@@ -32,7 +32,7 @@ const Intro = () => {
       <div className="i-left">
         <div className="i-name">
           <span>Hy! I am</span>
-          <div className="iiflex">
+          <div className="flex  md:iiflex">
             <motion.span
               style={{ flexDirections: "row" }}
               initial={{ opacity: 0 }}
@@ -41,7 +41,7 @@ const Intro = () => {
             >
               Vishal
             </motion.span>
-            &nbsp;
+            &nbsp;&nbsp;&nbsp;
             <motion.span
               style={{ flexDirections: "row" }}
               whileInView={{ y: [-100, 0, 0], opacity: 1 }}
@@ -86,8 +86,8 @@ const Intro = () => {
           ref={imgref}
           src="dp.jpg"
           style={{
-            // height: "100%",
-            // maxHeight:"100%",
+            height: "400px",
+            width:"300px",
             // height:"auto",
             objectFit: "cover",
             // right: "65px",
