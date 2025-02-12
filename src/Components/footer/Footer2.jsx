@@ -1,24 +1,32 @@
 import React from "react";
 import "./Footer2.css";
-import "./Footer.css";
 import logo2 from "../../logo.svg";
 import { RiFacebookFill, RiGithubFill, RiLinkedinFill } from "react-icons/ri";
 import { ImArrowUp2 } from "react-icons/im";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { motion } from "framer-motion";
 
-
 const Footer2 = () => {
-  const transition = { duration: 2, type: "spring" };
+  const transition = { duration: 1.5, type: "spring", bounce: 0.4 };
+  
   const handleClick = () => {
-    scroll.scrollToTop();
+    scroll.scrollToTop({
+      duration: 800,
+      smooth: 'easeInOutQuart'
+    });
   };
+
   return (
     <>
       <section>
         <footer className="top">
-          {/* <img src="logo192.png" alt="logo"/> */}
-          <motion.img transition={transition} initial={{opacity:0}} whileInView={{opacity:1}} src={logo2} alt="Logo" />
+          <motion.img 
+            transition={transition} 
+            initial={{opacity:0, y: 20}} 
+            whileInView={{opacity:1, y: 0}} 
+            src={logo2} 
+            alt="Logo" 
+          />
           <div className="links">
             <div>
               <h2 className="fmname"
@@ -86,29 +94,45 @@ const Footer2 = () => {
           </div>
         </footer>
         <footer className="py-3 footers">
-          <ImArrowUp2 className="farrow" onClick={handleClick} />
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <ImArrowUp2 className="farrow" onClick={handleClick} />
+          </motion.div>
         </footer>
         <footer className="bottom">
-
           <div className="flinks">
-            <a 
+            <motion.a 
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               title="Facebook | Vishal Kumar Singh"
-              href=""
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <RiFacebookFill />
-            </a>
-            <a
+            </motion.a>
+            <motion.a 
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               title="GitHub | Vishal Kumar Singh"
-              href=""
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <RiGithubFill />
-            </a>
-            <a
+            </motion.a>
+            <motion.a 
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               title="LinkedIn | Vishal Kumar Singh"
-              href=""
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <RiLinkedinFill />
-            </a>
+            </motion.a>
           </div>
         </footer>
       </section>

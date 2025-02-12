@@ -8,57 +8,21 @@ import { motion } from "framer-motion";
 import { HiExternalLink } from "react-icons/hi";
 
 const images = [
-  // {
-  //   img: "https://res.cloudinary.com/dsr70k3to/image/upload/v1687766926/Portfolio/ReactPortfolio_m2ieek.webp",
-  //   description: "React Portfolio - portfolio website built with React",
-  //   link: "/",
-  // },
-  // {
-  //   img: "https://res.cloudinary.com/dsr70k3to/image/upload/v1687766928/Portfolio/smmarketing_gxkcwv.webp",
-  //   description: "SM Marketing - Social Media services Platform web app.",
-  //   link: "https://sm-marketing.vercel.app/",
-  // },
-  // {
-  //   img: "https://res.cloudinary.com/dsr70k3to/image/upload/v1687766930/Portfolio/react-weather-mode_lgm0ox.webp",
-  //   description:
-  //     "Weather Mode - a simple real-time weather website to check any city live weather",
-  //   link: "https://weather-mode.vercel.app/",
-  // },
-  // {
-  //   img: "https://res.cloudinary.com/dsr70k3to/image/upload/v1687764563/Portfolio/AshleyDelBello_clone_ekipgf.webp",
-  //   description:
-  //     "Life + Business coach - Ashley website converted from Wordpress to ReactJs.",
-  //   link: "https://ashley-react.netlify.app/",
-  // },
-  // {
-  //   img: "https://res.cloudinary.com/dsr70k3to/image/upload/v1687764563/Portfolio/solar-innovatio_xe4nsf.webp",
-  //   description:
-  //     "Solar Energy Company- converted Figma design into a ReactJs website",
-  //   link: "https://solar-innovative.netlify.app/",
-  // },
-  // {
-  //   img: "https://res.cloudinary.com/dsr70k3to/image/upload/v1687766927/Portfolio/essendant_yzkv7i.webp",
-  //   description: "Essendant - Clone of E-commerce website for office supplies",
-  //   link: "https://essendant.vercel.app/",
-  // },
-  // {
-  //   img: "https://res.cloudinary.com/dsr70k3to/image/upload/v1687766928/Portfolio/MouseMove_p7nvxv.webp",
-  //   description:
-  //     "React Mouse Move - Interactive animation that follows mouse movement to use in projects.",
-  //   link: "https://react-mouse-move.vercel.app/",
-  // },
-  // {
-  //   img: "https://res.cloudinary.com/dsr70k3to/image/upload/v1687766930/Portfolio/darazshop_yt4e2x.webp",
-  //   description:
-  //     "Daraz Shop - E-commerce platform for clothing. An e-commerce website built with React and Redux.",
-  //   link: "https://shoppingcart-daraz.vercel.app/",
-  // },
-  // {
-  //   img: "https://res.cloudinary.com/dsr70k3to/image/upload/v1687766930/Portfolio/palletfly_ako5ui.webp",
-  //   description:
-  //     "PalletFly - Ecom Logistic Company Website Clone. An e-commerce website for wholesale merchandise",
-  //   link: "/",
-  // },
+  {
+    img: "https://res.cloudinary.com/dsr70k3to/image/upload/v1687766928/Portfolio/MouseMove_p7nvxv.webp",
+    description: "Cloud Monitor and VPS Dashboard Tool",
+    link: "https://cloud-monitor-vps-dashboard-tool.vercel.app/",
+  },
+  {
+    img: "https://res.cloudinary.com/dsr70k3to/image/upload/v1687766928/Portfolio/MouseMove_p7nvxv.webp",
+    description: "Distributed Key Value Store",
+    link: "https://distributed-key-value-store.vercel.app/",
+  },
+  {
+    img: "https://res.cloudinary.com/dsr70k3to/image/upload/v1687766928/Portfolio/MouseMove_p7nvxv.webp",
+    description: "Stock Market Price Predictor",
+    link: "https://stock-market-price-predictor.vercel.app/",
+  },
 ];
 
 const Portfolio = () => {

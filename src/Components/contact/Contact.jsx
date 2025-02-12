@@ -22,13 +22,14 @@ const Contact = () => {
   const item = {
     hidden: {
       opacity: 0,
-      x: -50,
+      y: 20,
     },
     show: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.6,
+        ease: "easeOut",
       },
     },
   };
@@ -81,6 +82,7 @@ const Contact = () => {
             variants={variants}
             initial="hidden"
             whileInView="show"
+            className="glass-form"
           >
             <motion.input
               variants={item}
@@ -107,6 +109,8 @@ const Contact = () => {
             />
             <motion.input
               variants={item}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               type="submit"
               value="Send Message"
               className="a-btn"

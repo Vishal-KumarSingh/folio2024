@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 // import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Fade as Hamburger } from "hamburger-react";
 
 const Header = ({ menuOpen, setMenuOpen }) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const handleClick = () => {
     scroll.scrollToTop();
   };
 
   return (
-    <nav>
+    <nav className={scrolled ? 'scrolled' : ''}>
       <NavContent
         handleClick={handleClick}
         menuOpen={menuOpen}
@@ -57,10 +75,10 @@ export const HeaderPhone = ({ menuOpen, setMenuOpen }) => {
             <Link
               onClick={() => setMenuOpen(false)}
               activeClass="active"
-              to="services"
+              to="education"
               spy={true}
             >
-              Serivces
+              Education
             </Link>
           </li>
           <li>
@@ -110,7 +128,7 @@ const NavContent = ({ menuOpen, setMenuOpen, handleClick }) => (
 
       <div className="n-right">
         <button className="navBtn" onClick={() => setMenuOpen(!menuOpen)}>
-        <Hamburger toggled={menuOpen} toggle={setMenuOpen}  size={20} color="#ff075b" />
+        <Hamburger toggled={menuOpen} toggle={setMenuOpen}  size={20} color="#007bff" />
           {/* {menuOpen ? <AiOutlineClose /> : <AiOutlineMenu />} */}
         </button>
         <div className="n-list">
@@ -126,8 +144,8 @@ const NavContent = ({ menuOpen, setMenuOpen, handleClick }) => (
               </Link>
             </li>
             <li>
-              <Link activeClass="active" to="services" spy={true}>
-                Serivces
+              <Link activeClass="active" to="education" spy={true}>
+                Education
               </Link>
             </li>
             <li>

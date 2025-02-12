@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Loader from "./Loader";
 import "./App.css";
 import Header, { HeaderPhone } from "./Components/header/Header";
-import Services from "./Components/services/Services";
+import Education from "./Components/education/Education";
 import Portfolio from "./Components/portfolio/Portfolio";
 import Testimonial from "./Components/testimonial/Testimonial";
 import Contact from "./Components/contact/Contact";
@@ -44,11 +44,10 @@ function App() {
           <HeaderPhone menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           <Intro />
-          <About />
-          <Services />
+          {/* <About /> */}
+          <Education />
           <Portfolio />
-          <Testimonial />
-          <Contact />
+          <Contact />   
           <Footer2 />
           <Toaster />
         </div>

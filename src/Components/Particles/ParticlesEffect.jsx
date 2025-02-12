@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 function ParticlesEffect() {
   const canvasRef = useRef(null);
 
-  useEffect(() => {
+  useEffect(() => { 
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;

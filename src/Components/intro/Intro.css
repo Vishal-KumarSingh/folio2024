@@ -51,7 +51,7 @@
 }
 /* .i-name > :nth-child(2)>* { */
 .i-name > :nth-child(2) > * {
-  color: #ff075b;
+  color: #007bff; /* Changed to blue */
   font-weight: 700;
   font-size: 3rem;
   /* color: white; */
@@ -79,7 +79,7 @@
 .i-name > span > :first-child > * {
   font-weight: 400;
   font-size: 2rem;
-  color: orange;
+  color: #007bff; /* Changed to blue */
 }
 .i-button {
   width: 6rem;
@@ -99,7 +99,7 @@
   filter: drop-shadow(8px 8px 1px pink);
 } */
 .Intro::before {
-  background: #ff075b;
+  background: #007bff; /* Changed to blue */
   transform: skew(30deg) translate(100%);
   /* z-index: 3; */
 }
@@ -199,7 +199,7 @@
   .i-name > span > :first-child > * {
     font-weight: 400;
     font-size: 30px;
-    color: orange;
+    color: #007bff; /* Changed to blue */
   }
   .i-name > :nth-child(3) {
     font-size: 30px !important;
@@ -269,12 +269,12 @@ a {
   margin-left: 0;
 }
 .header-social .header-social-icon ul li a {
-  color: #ff075b;
+  color: #007bff; /* Changed to blue */
   width: 45px;
   height: 45px;
   line-height: 40px;
   border-radius: 50%;
-  border: 1px solid orange;
+  border: 1px solid #007bff; /* Changed to blue */
   -webkit-transition: 0.3s ease-out;
   -moz-transition: 0.3s ease-out;
   -ms-transition: 0.3s ease-out;
@@ -285,8 +285,8 @@ a {
 }
 .header-social .header-social-icon ul li a:hover {
   color: #fff;
-  background-color: #ff075b;
-  border-color: #ff075b;
+  background-color: #007bff; /* Changed to blue */
+  border-color: #007bff; /* Changed to blue */
 }
 .header-social .header-social-icon ul li a > * {
   font-size: 25px;

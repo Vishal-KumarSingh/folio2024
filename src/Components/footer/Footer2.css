@@ -1,21 +1,28 @@
 section {
-  /* background-color: #0e3836; */
-  /* background-color: #040041; */
-  background-color: #00201f;
-  /* background: #172940; */
+  background: linear-gradient(to bottom, #001a19, #00201f);
   padding-top: 60px;
-
-  /* border-top-style: ; */
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-top-style: ridge;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top: 2px solid rgba(255, 166, 0, 0.3);
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
 }
+
 .top {
-  /* display: flex; */
   align-items: center;
-  /* justify-content: center; */
   margin: 20px;
-  padding: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.top::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, orange, transparent);
 }
 
 footer {
@@ -26,15 +33,15 @@ footer {
 }
 
 .top > svg {
-  /* width: 10%; */
   width: 20%;
 }
 .top > img {
-  /* width: 10%; */
   width: 10%;
 }
 .ftlink {
   position: relative;
+  padding-left: 20px;
+  transition: all 0.3s ease;
 }
 
 .ftlink:hover:before {
@@ -53,40 +60,35 @@ footer {
 }
 .ftlink:hover {
   color: orange;
+  transform: translateX(5px);
   transition: 0.3s ease-out;
 }
 .flinks a>* {
 height: 25px;
 width: 25px;
-/* -webkit-box-align: stretch;
-    alignment-baseline: text-before-edge; */
-    /* vertical-align: text-top; */
-    /* vertical-align: text-bottom; */
-    text-align: center;
+text-align: center;
 }
 
 .flinks a {
-  /* color: rgba(255, 217, 0, 0.712);
-  border: 1px solid gold; */
-  border: 1px solid orange;
-  color: goldenrod;
+  border: 2px solid orange;
+  color: orange;
   border-radius: 50%;
-  display: inline-block;
-  margin-right: 10px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  transition: 0.3s ease-in-out;
-
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
 }
+
 .flinks a:hover {
-  transform: scale(1.1);
-  /* border-left-width: thick;
-  border-right-width: unset; */
-
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 166, 0, 0.3);
+  background: orange;
+  color: #00201f;
 }
+
 .flinks a:nth-child(1){
   border-left-width: thick;
 }
@@ -99,10 +101,7 @@ width: 25px;
   border-top-width: thick;
 }
 .flinks a:nth-child(2):hover{
-  /* border-bottom-style: double; */
-  /* border-top-width: thin; */
   border-top-style: double;
-  /* border-style: dotted */
 }
 
 .flinks a:nth-child(3){
@@ -113,21 +112,27 @@ width: 25px;
   border-right-width: thin;
 }
 
-
 .footers {
   margin: 0 !important;
 }
 .fpara {
-  color: gold;
-font-family: cursive;
-
+  color: #ffd700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  font-style: italic;
+  text-shadow: 0 0 10px rgba(255, 217, 0, 0.3);
+  max-width: 600px;
+  margin: 20px auto;
 }
-.fmname{
-font-size: larger;
-/* font-family: cursive; */
-font-family: revert;
-text-decoration-thickness: from-font;
-text-transform: uppercase;
+
+.fmname {
+  font-size: 1.8rem;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #ffd700, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (width < 620px) {
@@ -140,20 +145,13 @@ text-transform: uppercase;
     flex-direction: column-reverse;
   }
   .top > img {
-    /* width: 10%; */
     width: 25%;
   }
 }
 
-/* footer > img {
-    margin-top: 10px;
-  }
-   */
 @media (width >= 620px) {
   footer {
-    /* margin: 0 30px; */
     margin: 0 auto;
-    /* max-width: 600px; */
     padding: 0;
   }
 }
@@ -161,11 +159,6 @@ text-transform: uppercase;
 footer {
   color: #a2b5cd;
 }
-
-/* footer.top {
-    border-bottom: 2px solid orange;
-    padding-bottom: 20px;
-  } */
 
 footer.bottom {
   padding: 20px 0;
@@ -182,7 +175,6 @@ footer.top .links {
   display: grid;
   gap: 10px;
   margin-bottom: 10px;
-  /* margin-bottom: 30px; */
 }
 
 footer h2 {
@@ -216,10 +208,8 @@ footer.bottom .links > a {
 @media (width < 420px) {
   .fpara {
     font-size: x-large;
-    
   }
   section {
-    /* height: 90vh; */
     padding-top: 0px;
     margin-top: 10px;
   }
@@ -255,4 +245,16 @@ footer.bottom .links > a {
     margin-right: 0;
     margin-bottom: 2px;
   }
+}
+
+.farrow {
+  font-size: 24px;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  color: orange;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
